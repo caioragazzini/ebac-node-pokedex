@@ -1,6 +1,6 @@
-const { schema} = require('moongose');
+const mongoose = require('mongoose');
 
-const Pokemon = new schema({
+const Pokemon = new mongoose.Schema({
 
     id:{
         type: Number,

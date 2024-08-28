@@ -1,11 +1,11 @@
 const express = require('express');
-const {pokemon} = require('../models');
+const {Pokemon} = require('../models');
 
 const router = express.Router();
 
 
-router.get('/', (res)=>{
-    pokemon.find({}).then((pokemons)=>{
+router.get('/', (_req , res)=>{
+    Pokemon.find().then((pokemons)=>{
         res.render('paginas/pokemons/index', {
             pokemons,
         });
