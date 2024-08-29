@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
-const pokemonSchema = require('./pokemon');
+const PokemonSchema = require('./pokemon');
 
-const pokemon = mongoose.model('pokemon', pokemonSchema);
+const Pokemon = mongoose.model('Pokemon', PokemonSchema);
 
 const connect = () => {
     mongoose.connect('mongodb://localhost:27017/pokedex')
 };
 
 module.exports ={
-    pokemon,
+    Pokemon,
     connect,
 }
 
