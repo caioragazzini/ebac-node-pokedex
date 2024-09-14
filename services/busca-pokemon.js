@@ -6,6 +6,7 @@ return new Promise((resolve, reject)=>{
     const url = "https://pokeapi.co/api/v2/pokemon/" + pokeId;
     
     axios.get(url).then(resultado => {{
+        console.log("🚀 ~ axios.get ~ resultado:", resultado)
         const data = resultado.data;
 
         const id =data.id;

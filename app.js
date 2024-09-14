@@ -1,4 +1,5 @@
 const express = require('express');
+const createError = require('http-errors');
 const {connect} = require('./models');
 const pokemonRouter = require('./routes/pokemons');
 const batalhaRouter = require('./routes/batalha');
@@ -23,6 +24,21 @@ app.use('/batalha', batalhaRouter);
 
 //declarando rotas API
 app.use('/api', capturaRouter);
+
+//caso não de mtch em nenhuma rota acima , tratamos erro 404
+app.use((_req, _res, next) => {
+    next(createError(404));
+});
+
+//tratativa de erro generica
+app.use((err, _req, res, _next) =>{
+
+    res.status(err.status || 500);
+    res.render('paginas/erro', {
+        mensagem: err.message,
+        erro:err,
+    });
+});
 
 app.listen(porta, () => {
     connect();
