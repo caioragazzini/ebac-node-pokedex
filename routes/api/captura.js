@@ -7,7 +7,7 @@ const router = express.Router();
 router.post('/captura/:id', (req, res) => {
 
     buscaInfoPokemon(req.params.id).then((pokemon) =>{
-        const pokemonCapturado = Math.random() <= 0.4;
+        const pokemonCapturado =true;
         console.log("🚀 ~ buscaInfoPokemon ~ pokemonCapturado:", pokemonCapturado)
         if(pokemonCapturado)
         {

@@ -38,6 +38,10 @@ const Pokemon = new mongoose.Schema({
     estatisticas:{
         type: Object,
         require: true,
+    },
+    jogos: {
+        type: [String], 
+        require: true
     }
 
 });

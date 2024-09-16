@@ -16,7 +16,7 @@ router.get('/', (_req , res)=>{
             pokemons,
             
         });
-            console.log("🚀 ~ Pokemon.find ~ pokemons:", pokemons)
+           // console.log("🚀 ~ Pokemon.find ~ pokemons:", pokemons)
       
     });
 });
@@ -27,6 +27,7 @@ router.get('/:id',(req, res) => {
             pokemon,
             message: req.query.message,
         });
+           // console.log("🚀 ~ Pokemon.findOne ~ pokemon:", pokemon)
     }).catch(e => {
         res.status(404).render('paginas/erro', {
             mensagem: "Pokemon não encontrado!!",

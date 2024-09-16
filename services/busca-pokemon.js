@@ -6,9 +6,9 @@ return new Promise((resolve, reject)=>{
     const url = "https://pokeapi.co/api/v2/pokemon/" + pokeId;
     
     axios.get(url).then(resultado => {{
-        console.log("🚀 ~ axios.get ~ resultado:", resultado)
+       
         const data = resultado.data;
-
+       
         const id =data.id;
         const nome = data.name;
         const altura = data.heigth;
@@ -16,11 +16,15 @@ return new Promise((resolve, reject)=>{
         const imagem = data.sprites.other['official-artwork'].front_default;
         const ataques = data.abilities.map(a=> a.ability.name).join(',');
 
+        const jogos = data.game_indices.map(a => a.version.name);
+        console.log("🚀 ~ axios.get ~ jogos:", jogos)
+      
         const estatisticas ={};
-
+     
         data.stats.forEach((estatistica)=> {
             estatisticas[estatistica.stat.name] = estatistica.base_stat
         });
+  
 
         resolve({
             id,
@@ -29,6 +33,7 @@ return new Promise((resolve, reject)=>{
             peso,
             imagem,
             ataques,
+            jogos,
             estatisticas
         })
 
