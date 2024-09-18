@@ -18,11 +18,19 @@ router.get('/', async (_req , res) => {
     });
 
 router.get('/:id', async (req, res) => {
-    const pokemon = await Pokemon.findOne({_id : req.params.id});
+    try{
+        const pokemon = await Pokemon.findOne({_id : req.params.id});
            res.render('paginas/pokemons/show',{
             pokemon,
             message: req.query.message,
-        });          
+        });      
+
+    } catch (e) {
+        res.status(404).render('paginas/erro', {
+            mensagem: "Pokemon não encontrado!!",
+            erro:{}
+        })
+     }        
     });
    
 
