@@ -4,7 +4,8 @@ const { Pokemon } = require('../models');
 const router = express.Router();
 
 router.get('/', async (_req , res) => {
-    const pokemons = await Pokemon.find();
+    try{
+        const pokemons = await Pokemon.find();
             pokemons.forEach(pokemon =>{
             const dataIso = pokemon._id.getTimestamp().toISOString();
             const datainfo = dataIso.split('T')[0];
@@ -13,8 +14,14 @@ router.get('/', async (_req , res) => {
         })
         res.render('paginas/pokemons/index', {
             pokemons,
-            
-        });              
+      });    
+
+    } catch (e){
+        res.status(404).render('paginas/erro', {
+            mensagem: "Pokemon não encontrado!!",
+            erro:{}
+        })
+    }              
     });
 
 router.get('/:id', async (req, res) => {

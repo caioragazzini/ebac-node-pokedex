@@ -3,18 +3,21 @@ const buscaInfoPokemon =require('../services/busca-pokemon');
 
 const router = express.Router();
 
-router.get('/', (_req, res) => {
-    const pokemonRandon = Math.round(Math.random() * 904 + 1);
-    console.log("🚀 ~ router.get ~ pokemonRandon:", pokemonRandon)
+router.get('/', async (_req, res) => {
+    try{
+        const pokemonRandon = Math.round(Math.random() * 904 + 1);   
 
-    buscaInfoPokemon(pokemonRandon).then(pokemon => {
+    const pokemon = await buscaInfoPokemon(pokemonRandon);  
         res.render('paginas/batalha/index', {
             pokemon,
         });
 
-    });
-
-    
+    } catch(e){
+        res.status(404).render('paginas/erro', {
+            mensagem: "Pokemon não Capturado!!",
+            erro:{}
+        })
+     }       
 });
 
 module.exports = router;
