@@ -22,7 +22,7 @@ router.get('/', async (_req , res) => {
             erro:{}
         })
     }              
-    });
+    });       
 
 router.get('/:id', async (req, res) => {
     try{
@@ -38,7 +38,7 @@ router.get('/:id', async (req, res) => {
             erro:{}
         })
      }        
-    });
+    }); 
    
 
 module.exports =router;
