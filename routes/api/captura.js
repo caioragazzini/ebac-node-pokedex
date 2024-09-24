@@ -12,12 +12,15 @@ router.post('/captura/:id', async (req, res) => {
        // console.log("🚀 ~ buscaInfoPokemon ~ pokemonCapturado:", pokemon)
         if(pokemonCapturado)
         {
-            Pokemon.create(pokemon).then((pokemonCapturado)=>{
+            try {
+                const pokemonCapturado = await Pokemon.create(pokemon);
                 res.json({
-                    capturado : true,
+                    capturado: true,
                     id: pokemonCapturado._id
                 });
-            }).catch(e => res.status(500).json({erro: e}));
+            } catch (e) {
+                res.status(500).json({ erro: e });
+            }
         }
     } catch (e) {
         res.status(404).render('paginas/erro', {
