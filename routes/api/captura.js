@@ -9,7 +9,7 @@ router.post('/captura/:id', async (req, res) => {
     try{
         const pokemon = await buscaInfoPokemon(req.params.id);
         const pokemonCapturado =true;
-        console.log("🚀 ~ buscaInfoPokemon ~ pokemonCapturado:", pokemon)
+       // console.log("🚀 ~ buscaInfoPokemon ~ pokemonCapturado:", pokemon)
         if(pokemonCapturado)
         {
             Pokemon.create(pokemon).then((pokemonCapturado)=>{

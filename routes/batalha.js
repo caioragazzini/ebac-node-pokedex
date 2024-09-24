@@ -8,6 +8,7 @@ router.get('/', async (_req, res) => {
         const pokemonRandon = Math.round(Math.random() * 904 + 1);   
 
     const pokemon = await buscaInfoPokemon(pokemonRandon);  
+        console.log("🚀 ~ router.get ~ pokemon:", pokemon)
         res.render('paginas/batalha/index', {
             pokemon,
         });
