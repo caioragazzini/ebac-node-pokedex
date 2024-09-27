@@ -1,0 +1,35 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Pokedex",
+    "collectionId": "f4b8c083-5ff0-4744-8db0-5488b87eceff",
+    "dateExported": "2024-09-27T00:32:17.655Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "7ba2fabf-0907-494d-b629-e787bfd8471c",
+            "colId": "f4b8c083-5ff0-4744-8db0-5488b87eceff",
+            "containerId": "",
+            "name": "Status  check",
+            "url": "http://localhost:3000/api/status",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-09-27T00:28:32.108Z",
+            "modified": "2024-09-27T00:28:51.267Z",
+            "headers": []
+        },
+        {
+            "_id": "441e810f-8b80-4e72-8857-0044e74573d7",
+            "colId": "f4b8c083-5ff0-4744-8db0-5488b87eceff",
+            "containerId": "",
+            "name": "Captura de Pokemon",
+            "url": "http://localhost:3000/api/captura/10",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-09-27T00:30:16.605Z",
+            "modified": "2024-09-27T00:31:05.212Z",
+            "headers": []
+        }
+    ],
+    "ref": "yYqFSwBPdGg1U1ZM0zouK_cNuLPxDP_xTnxlZ_Duly3pOVH63rVfGPZBm4ZA0PRRBaq-IuETLxhg5L_vapbbng"
+}
