@@ -2,7 +2,7 @@
     "clientName": "Thunder Client",
     "collectionName": "Pokedex",
     "collectionId": "f4b8c083-5ff0-4744-8db0-5488b87eceff",
-    "dateExported": "2024-09-27T00:32:17.655Z",
+    "dateExported": "2024-09-30T21:26:26.023Z",
     "version": "1.2",
     "folders": [],
     "requests": [
@@ -29,7 +29,146 @@
             "created": "2024-09-27T00:30:16.605Z",
             "modified": "2024-09-27T00:31:05.212Z",
             "headers": []
+        },
+        {
+            "_id": "d29993d6-9a72-4382-bdbf-4446c557f14f",
+            "colId": "f4b8c083-5ff0-4744-8db0-5488b87eceff",
+            "containerId": "",
+            "name": "Create Pokemon",
+            "url": "http://localhost:3000/api/pokemons",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-09-29T14:37:33.685Z",
+            "modified": "2024-09-29T14:41:36.141Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"id\": 41,\n    \"nome\": \"zubat\",\n    \"altura\": 8,\n    \"peso\": 75,\n    \"imagem\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/41.png\",\n    \"ataques\": \"inner-focus,infiltrator\",\n    \"jogos\": [\n        \"red\", \"blue\"\n    ],\n    \"estatisticas\": {\n        \"hp\": 40,\n        \"attack\": 45,\n        \"defense\": 35,\n        \"special-attack\": 30,\n        \"special-defense\": 40,\n        \"speed\": 55\n    }\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "e3341329-3c2b-4fe7-869d-67b54cd1b919",
+            "colId": "f4b8c083-5ff0-4744-8db0-5488b87eceff",
+            "containerId": "",
+            "name": "Get Pokemon ",
+            "url": "http://localhost:3000/api/pokemons?name=zub",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-09-29T14:44:42.779Z",
+            "modified": "2024-09-30T21:06:45.010Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "name",
+                    "value": "zub",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "00119995-c54d-4060-9a47-1f9342c6d15c",
+            "colId": "f4b8c083-5ff0-4744-8db0-5488b87eceff",
+            "containerId": "",
+            "name": "Get Pokemon  ID",
+            "url": "http://localhost:3000/api/pokemons//66f2a6ed26d3b7d26cc6beea",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-09-30T19:55:54.543Z",
+            "modified": "2024-09-30T20:30:35.791Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "name",
+                    "value": "squi",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "5c00d9bc-63ef-4f06-a03a-f5bbfca1b04b",
+            "colId": "f4b8c083-5ff0-4744-8db0-5488b87eceff",
+            "containerId": "",
+            "name": "Get Pokemon  altura",
+            "url": "http://localhost:3000/api/pokemons?minHeight=21",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-09-30T21:02:27.228Z",
+            "modified": "2024-09-30T21:12:29.218Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "minHeight",
+                    "value": "21",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "27af6419-9d97-41af-8145-dad0c2b40f31",
+            "colId": "f4b8c083-5ff0-4744-8db0-5488b87eceff",
+            "containerId": "",
+            "name": "Patch Pokemon  ",
+            "url": "http://localhost:3000/api/pokemons//66f2a6ed26d3b7d26cc6beea",
+            "method": "PATCH",
+            "sortNum": 60000,
+            "created": "2024-09-30T20:31:43.097Z",
+            "modified": "2024-09-30T20:33:15.187Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "name",
+                    "value": "squi",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \n  \"nome\":\"super eiscue-ice\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "28cec732-2e0b-4cf1-ae6e-9a3886644c4f",
+            "colId": "f4b8c083-5ff0-4744-8db0-5488b87eceff",
+            "containerId": "",
+            "name": "Get Pokemon peso",
+            "url": "http://localhost:3000/api/pokemons?minWeight=0",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-09-30T21:23:35.520Z",
+            "modified": "2024-09-30T21:25:51.806Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "minWeight",
+                    "value": "0",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "9418dd20-fe5b-47e0-8205-5067a26f08de",
+            "colId": "f4b8c083-5ff0-4744-8db0-5488b87eceff",
+            "containerId": "",
+            "name": "Patch Pokemon   Copy",
+            "url": "http://localhost:3000/api/pokemons/66f967277c2f2bb454684180",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2024-09-30T20:44:51.191Z",
+            "modified": "2024-09-30T20:47:10.177Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "name",
+                    "value": "squi",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ]
         }
     ],
-    "ref": "yYqFSwBPdGg1U1ZM0zouK_cNuLPxDP_xTnxlZ_Duly3pOVH63rVfGPZBm4ZA0PRRBaq-IuETLxhg5L_vapbbng"
+    "ref": "yYqFSwBPdGg1U1ZM0zouKxBjqn1N9JDjsNJAiISzmWPyrEpvGfkA_aCLwTaC0ppRW16fv9XEXIceMBUZ7rDJAQ"
 }
