@@ -27,6 +27,26 @@ router.get('/', async (req, res)=>{
         })
     }
 });
+
+router.get('/:id', async (req,res)=>{
+    try{
+        const pokemon = await Pokemon.findOne({_id : req.params.id});
+        res.json({
+            pokemon,
+            sucesso: true,
+        })
+
+    }catch(e){
+        res.status(404).json({
+
+            sucesso: false,
+            erro:'Pokemon não encontrado',
+
+        })
+
+    }
+});
+
 router.post('/', async (req,res)=>{
     try{
 
@@ -40,6 +60,31 @@ router.post('/', async (req,res)=>{
         res.status(422).json({
             sucesso : false,
             message : e,
+        });
+    }
+});
+
+router.patch('/:id', async(req,res)=> {
+    try{
+        const pokemon = await Pokemon.findOne({_id: req.params.id});
+
+        Object.keys(req.body).forEach((atributo)=> {
+
+            pokemon[atributo] = req.body[atributo];
+
+        });
+
+        await pokemon.save();
+        res.json({
+            sucess: true,
+            pokemon:pokemon,
+        });
+
+    }catch(e)
+    {
+        res.status(422).json({
+            sucess: false,
+            erro: e,
         });
     }
 });
