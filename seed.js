@@ -1,7 +1,9 @@
 require('dotenv').config();
 
 const mongoose = require('mongoose');
-const { connect, Pokemon} = require('./models');
+const bcrypt = require('bcrypt');
+
+const { connect, Pokemon, Usuario} = require('./models');
 
 const populaBancoDeDados = async () => {
     connect();
@@ -219,6 +221,13 @@ const populaBancoDeDados = async () => {
           speed: 70
         }
     });
+
+    await Usuario.create({
+        email:'caio@gmail.com',
+        nome: 'caio',
+        senha: await bcrypt.hash('app@1234',10),
+
+    })
     
     await mongoose.disconnect();
 };

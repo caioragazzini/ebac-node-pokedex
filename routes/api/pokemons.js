@@ -16,8 +16,7 @@ router.get('/', async (req, res)=>{
         }
         if (filtros.minWeight) {
             options.peso = { $gte: Number(filtros.minWeight) }; 
-        }        
-      
+        }              
         if (filtros.minHeight) {
             options.altura = { $gte: Number(filtros.minHeight) }; 
         }
@@ -43,19 +42,15 @@ router.get('/:id', async (req,res)=>{
         const pokemon = await Pokemon.findOne({_id : req.params.id});
         res.json({
             pokemon,
-            success
-: true,
+            success: true,
         })
-
     }catch(e){
         res.status(404).json({
 
-            success
-: false,
+            success: false,
             erro:'Pokemon não encontrado',
 
         })
-
     }
 });
 
