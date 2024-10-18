@@ -2,7 +2,7 @@
     "clientName": "Thunder Client",
     "collectionName": "Pokedex",
     "collectionId": "f4b8c083-5ff0-4744-8db0-5488b87eceff",
-    "dateExported": "2024-09-30T21:26:26.023Z",
+    "dateExported": "2024-10-18T15:05:43.407Z",
     "version": "1.2",
     "folders": [],
     "requests": [
@@ -39,8 +39,13 @@
             "method": "POST",
             "sortNum": 30000,
             "created": "2024-09-29T14:37:33.685Z",
-            "modified": "2024-09-29T14:41:36.141Z",
-            "headers": [],
+            "modified": "2024-10-18T15:03:11.129Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhaW9yYWdhenppbmlAZ21haWwuY29tIiwiaWF0IjoxNzI5MjYzNjUyfQ.I1JUqDhR525T6aeXA4DUESLCVBX5QXD_209Ek428WN8"
+                }
+            ],
             "body": {
                 "type": "json",
                 "raw": "{\n    \"id\": 41,\n    \"nome\": \"zubat\",\n    \"altura\": 8,\n    \"peso\": 75,\n    \"imagem\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/41.png\",\n    \"ataques\": \"inner-focus,infiltrator\",\n    \"jogos\": [\n        \"red\", \"blue\"\n    ],\n    \"estatisticas\": {\n        \"hp\": 40,\n        \"attack\": 45,\n        \"defense\": 35,\n        \"special-attack\": 30,\n        \"special-defense\": 40,\n        \"speed\": 55\n    }\n}",
@@ -56,8 +61,13 @@
             "method": "GET",
             "sortNum": 40000,
             "created": "2024-09-29T14:44:42.779Z",
-            "modified": "2024-09-30T21:06:45.010Z",
-            "headers": [],
+            "modified": "2024-10-18T15:02:54.967Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhaW9yYWdhenppbmlAZ21haWwuY29tIiwiaWF0IjoxNzI5MjYzNjUyfQ.I1JUqDhR525T6aeXA4DUESLCVBX5QXD_209Ek428WN8"
+                }
+            ],
             "params": [
                 {
                     "name": "name",
@@ -75,8 +85,13 @@
             "method": "GET",
             "sortNum": 50000,
             "created": "2024-09-30T19:55:54.543Z",
-            "modified": "2024-09-30T20:30:35.791Z",
-            "headers": [],
+            "modified": "2024-10-18T13:59:10.195Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhaW9yYWdhenppbmlAZ21haWwuY29tIiwiaWF0IjoxNzI5MjU5OTI4fQ.Hju-du_RWUy4x_iGwVzbMlgvWdtI5sYxaXdg0ZTFFo4"
+                }
+            ],
             "params": [
                 {
                     "name": "name",
@@ -95,13 +110,35 @@
             "method": "GET",
             "sortNum": 50000,
             "created": "2024-09-30T21:02:27.228Z",
-            "modified": "2024-09-30T21:12:29.218Z",
-            "headers": [],
+            "modified": "2024-10-17T19:01:46.836Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhaW9yYWdhenppbmlAZ21haWwuY29tIiwiaWF0IjoxNzI5MTkxNjI5fQ.hGnAbkzkBYZ4-XrWZE3tf4zbtPbCmQYMArSi-MZikG4"
+                }
+            ],
             "params": [
                 {
                     "name": "minHeight",
                     "value": "21",
                     "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "84252d86-e86e-43b4-84d3-94d8debb40f5",
+            "colId": "f4b8c083-5ff0-4744-8db0-5488b87eceff",
+            "containerId": "",
+            "name": "Get Pokemon  Copy",
+            "url": "http://localhost:3000/api/pokemons",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-10-18T14:00:09.872Z",
+            "modified": "2024-10-18T14:48:00.268Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhaW9yYWdhenppbmlAZ21haWwuY29tIiwiaWF0IjoxNzI5MjYyODY3fQ.ySQOuE4J64WGWakqzR3lsNrW_IoysMSBPMTU4NpriTo"
                 }
             ]
         },
@@ -114,8 +151,13 @@
             "method": "PATCH",
             "sortNum": 60000,
             "created": "2024-09-30T20:31:43.097Z",
-            "modified": "2024-09-30T20:33:15.187Z",
-            "headers": [],
+            "modified": "2024-10-18T15:02:05.955Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhaW9yYWdhenppbmlAZ21haWwuY29tIiwiaWF0IjoxNzI5MjYzNjUyfQ.I1JUqDhR525T6aeXA4DUESLCVBX5QXD_209Ek428WN8"
+                }
+            ],
             "params": [
                 {
                     "name": "name",
@@ -139,8 +181,14 @@
             "method": "GET",
             "sortNum": 60000,
             "created": "2024-09-30T21:23:35.520Z",
-            "modified": "2024-09-30T21:25:51.806Z",
-            "headers": [],
+            "modified": "2024-10-18T15:01:44.384Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhaW9yYWdhenppbmlAZ21haWwuY29tIiwiaWF0IjoxNzI5MjYzNjUyfQ.I1JUqDhR525T6aeXA4DUESLCVBX5QXD_209Ek428WN8",
+                    "isDisabled": true
+                }
+            ],
             "params": [
                 {
                     "name": "minWeight",
@@ -158,8 +206,13 @@
             "method": "DELETE",
             "sortNum": 70000,
             "created": "2024-09-30T20:44:51.191Z",
-            "modified": "2024-09-30T20:47:10.177Z",
-            "headers": [],
+            "modified": "2024-10-18T15:01:17.799Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhaW9yYWdhenppbmlAZ21haWwuY29tIiwiaWF0IjoxNzI5MjYzNjUyfQ.I1JUqDhR525T6aeXA4DUESLCVBX5QXD_209Ek428WN8"
+                }
+            ],
             "params": [
                 {
                     "name": "name",
@@ -168,7 +221,24 @@
                     "isPath": false
                 }
             ]
+        },
+        {
+            "_id": "19dad022-250b-48a4-ba11-e534c4e7dd3c",
+            "colId": "f4b8c083-5ff0-4744-8db0-5488b87eceff",
+            "containerId": "",
+            "name": "Login",
+            "url": "http://localhost:3000/api/autenticacao/login",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2024-10-17T14:29:17.090Z",
+            "modified": "2024-10-17T19:00:29.485Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"caioragazzini@gmail.com\",\n  \"senha\": \"app@1234\"\n}",
+                "form": []
+            }
         }
     ],
-    "ref": "yYqFSwBPdGg1U1ZM0zouKxBjqn1N9JDjsNJAiISzmWPyrEpvGfkA_aCLwTaC0ppRW16fv9XEXIceMBUZ7rDJAQ"
+    "ref": "yYqFSwBPdGg1U1ZM0zouK1rwUbwMLL0r82HaAU1o71doXD2lO6LkddJoffFowsRbQBupo8B_VSKD7nYiOawOEg"
 }
