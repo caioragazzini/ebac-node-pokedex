@@ -2,28 +2,28 @@ const express = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
-const {Usuario} = require('../../models');
+const { Usuario } = require('../../models');
 
-const router = express.Route();
+const router = express.Router();
 
-router.post('/', async (req,res)=> {
+router.post('/login', async(req,res)=> {
     try{
-        const usuario = Usuario.findOne({email: req.params.email});
-
+        const usuario = await Usuario.findOne({email: req.body.email});
+               
         const senhaEstaCorreta = await bcrypt.compare(req.body.senha, usuario?.senha || '');
 
         if(senhaEstaCorreta){
             res.json({
-                sucess :true,
-                jwt: jwt.sign({ 
-
+                sucesso: true,
+                jwt: jwt.sign(
+                    { 
                     email : usuario.email,
-                }, process.env.SEREDO_JWT)
+                }, process.env.SEGREDO_JWT)
             });
         } else{
             res.status(401).json({
-                success : false,
-                erro :'Usuario ou senha invalidos'
+                successo : false,
+                erro :'Usuario ou senha invalidos',
             })
         }
         

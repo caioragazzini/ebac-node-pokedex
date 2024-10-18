@@ -9,9 +9,9 @@ const connect = () => {
     mongoose.connect(process.env.MONGO_URL);
 };
 
-module.exports ={
+module.exports = {    
+    Pokemon, 
     Usuario,
-    Pokemon,
     connect,
 }
 

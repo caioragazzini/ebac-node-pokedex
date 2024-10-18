@@ -223,11 +223,11 @@ const populaBancoDeDados = async () => {
     });
 
     await Usuario.create({
-        email:'caio@gmail.com',
+        email:'caioragazzini@gmail.com',
         nome: 'caio',
         senha: await bcrypt.hash('app@1234',10),
 
-    })
+    });
     
     await mongoose.disconnect();
 };
