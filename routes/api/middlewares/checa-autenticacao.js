@@ -13,6 +13,8 @@ const checaAutenticacao =  async (req, res, next)=>{
             throw 'Usuario não encontrado';
         }
 
+        req.usuario = usuario;
+
     next();
     }catch(e){
         res.status(401).json({

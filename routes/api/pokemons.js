@@ -21,6 +21,8 @@ router.get('/', async (req, res)=>{
             options.altura = { $gte: Number(filtros.minHeight) }; 
         }
 
+        options.capturadoPor = req.usuario._id;
+
         const pokemons = await Pokemon.find(options);
         
         res.status(200).json({
@@ -39,7 +41,10 @@ router.get('/', async (req, res)=>{
 
 router.get('/:id', async (req,res)=>{
     try{
-        const pokemon = await Pokemon.findOne({_id : req.params.id});
+        const pokemon = await Pokemon.findOne({
+            _id : req.params.id,
+            capturadoPor : req.usuario._id,
+        });
         res.json({
             pokemon,
             success: true,
@@ -57,7 +62,11 @@ router.get('/:id', async (req,res)=>{
 router.post('/', async (req,res)=>{
     try{
 
-        const pokemon = await Pokemon.create(req.body);
+        const pokemon = await Pokemon.create({
+            ...req.body, 
+            ...{
+                capturadoPor : req.usuario._id               
+            }});
         res.status(201).json({
             success
  : true,
@@ -75,7 +84,7 @@ router.post('/', async (req,res)=>{
 
 router.patch('/:id', async(req,res)=> {
     try{
-        const pokemon = await Pokemon.findOne({_id: req.params.id});
+        const pokemon = await Pokemon.findOne({_id: req.params.id,  capturadoPor : req.usuario._id,});
 
         Object.keys(req.body).forEach((atributo)=> {
 

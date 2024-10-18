@@ -42,8 +42,15 @@ const Pokemon = new mongoose.Schema({
     jogos: {
         type: [String], 
         require: true
+    },
+    capturadoPor :{
+        type: mongoose.Schema.Types.ObjectId,
+        require : true,
+        ref: 'User'
     }
 
 });
+
+Pokemon.index({capturadoPor: 1});
 
 module.exports = Pokemon;
