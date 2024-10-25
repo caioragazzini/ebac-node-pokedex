@@ -1,5 +1,5 @@
-const express =require('express');
-const buscaInfoPokemon =require('../services/busca-pokemon');
+const express = require('express');
+const buscaInfoPokemon = require('../services/busca-pokemon');
 
 const router = express.Router();
 

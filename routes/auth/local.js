@@ -33,7 +33,7 @@ passport.serializeUser((usuario, done)=>{
 passport.deserializeUser( async(id, done)=>{
     let err, usuario;
     try{
-        usuario = await User.findById(id);
+        usuario = await Usuario.findById(id);
 
     } catch(err){
         err = err;
