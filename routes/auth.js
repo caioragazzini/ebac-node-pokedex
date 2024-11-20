@@ -24,4 +24,27 @@ router.post('/', passport.authenticate('local', {
     failureRedirect: '/auth?erroNoLogin=true'
 }));
 
+// Autenticação com Google
+router.get('/google', checaNaoAutenticado, passport.authenticate('google'));
+
+router.get('/oauth2/redirect/google',checaNaoAutenticado, passport.authenticate('google',{
+    failureRedirect: '/auth',
+    failureMessage: true    
+}),(_req, res)=> {
+    res.redirect('/');
+});
+
+// Rota de login pelo GitHub
+router.get('/github', passport.authenticate('github', {
+    scope: ['user:email']
+}));
+
+// Rota de callback após a autenticação do GitHub
+router.get('/oauth2/redirect/github', 
+    passport.authenticate('github', { failureRedirect: '/login' }),
+    (req, res) => {
+        res.redirect('/auth');
+    }
+);
+
 module.exports = router;

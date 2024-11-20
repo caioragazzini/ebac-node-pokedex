@@ -22,6 +22,14 @@ const Usuario = new Schema({
         type: String,
         require: true,
     },
+    googleUsuarioId:{
+        type: String,
+        require: false,
+    },
+    gitHubUsuarioId:{
+        type: String,
+        require: false,
+    },
 });
 
 Usuario.index({email: 1});

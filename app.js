@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 
 const passport = require('passport');
+
 const session = require('express-session');
 const createError = require('http-errors');
 
@@ -35,12 +36,17 @@ app.use(session({
 }));
 
 app.use(passport.initialize());
+
 app.use(passport.session());
+
+
 
 // configurando ejs
 app.set('views', path.join(__dirname, 'views') );
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
+
+
 
 // configurando arquivos estaticos
 app.use(express.static(path.join(__dirname, 'public')));
